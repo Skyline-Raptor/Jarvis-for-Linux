@@ -1,0 +1,12 @@
+JARVIS FRESH — LINUX MINT
+1. Extract the ZIP into a permanent folder in your home directory.
+2. Read SETUP_STEP_BY_STEP.md.
+3. Open a terminal inside this folder and run: bash install.sh
+4. Install Ollama, then run: bash install_models.sh
+5. Run: bash start_jarvis.sh
+Do not run the app or installer with sudo. Only apt/service setup uses sudo.
+Use Cinnamon (X11) for screen awareness and desktop control.
+This is a tested engineering preview, not a guarantee of zero bugs.
+
+GITHUB SOURCE EDITION: pinned Python packages download during installation.
+See README.md, SETUP_STEP_BY_STEP.md and GITHUB_IMPORT.md.

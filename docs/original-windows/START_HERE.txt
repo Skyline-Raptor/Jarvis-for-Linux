@@ -1,0 +1,24 @@
+JARVIS FRESH 1.0.0 — ENGINEERING PREVIEW 1
+
+1. Extract this entire ZIP to a permanent local folder, for example C:\JarvisFresh.
+2. Read SETUP_STEP_BY_STEP.md. It covers installation and every account/device step.
+3. Run Install_Jarvis.cmd. This installs the Python application and British George.
+4. Install Ollama from https://ollama.com/download/windows and open it.
+5. Run Install_Models.cmd, then quit/reopen Ollama to apply local-only settings.
+6. Run Start_Jarvis.cmd. Open Settings > Check system.
+7. Use Files to import a harmless test file; ask Jarvis to create a revised copy.
+8. Run Test_Jarvis.cmd and Native_Check.cmd on each computer.
+
+This is runnable application source with a Windows setup launcher, not a signed
+standalone EXE or a certified finished replacement for ChatGPT. Models and Python
+dependency wheels are included; runtime/model downloads still happen during setup.
+No paid AI account/key is required.
+
+The test report distinguishes automated/simulated checks from native Windows
+checks. FEATURE_STATUS.md lists capabilities and remaining gaps. Integrated phone
+calls and automatic cross-device memory synchronization are not implemented.
+Image/video generation requires a separately installed local ComfyUI and models.
+
+User data defaults to %LOCALAPPDATA%\JarvisFresh. Keep this application folder
+in place after installation; the Python virtual environment is not movable.
+Never move tokens/credential stores between computers; sign in separately.

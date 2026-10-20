@@ -1,0 +1,18 @@
+[
+  {
+    "iteration": 1,
+    "sample_rate": 24000,
+    "seconds_audio": 4.693333333333333,
+    "peak": 0.3843994140625,
+    "recognized": "Hello, this is Jarvis. Your local voice system is ready for testing.",
+    "elapsed_seconds": 10.67
+  },
+  {
+    "iteration": 2,
+    "sample_rate": 24000,
+    "seconds_audio": 4.693333333333333,
+    "peak": 0.3848876953125,
+    "recognized": "Hello, this is Jarvis. Your local voice system is ready for testing.",
+    "elapsed_seconds": 8.41
+  }
+]

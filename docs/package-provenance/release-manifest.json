@@ -1,0 +1,819 @@
+{
+  "release": "1.0.1-preview.1-linux",
+  "target": "Linux Mint x86_64; CPython 3.12",
+  "built_utc": "2026-10-20T16:55:41.150102+00:00",
+  "files": {
+    "Apply_Candidate.cmd": {
+      "bytes": 134,
+      "sha256": "2895b16fb4b37cc1e2b771c4625e9d1939d045a394d049047270bf51deb266db"
+    },
+    "FEATURE_STATUS.md": {
+      "bytes": 7063,
+      "sha256": "5e578ae22e77240ad27ea39d9fecc37dba14ee736f46830915a6a3cb12ee3eee"
+    },
+    "Install_Images.cmd": {
+      "bytes": 158,
+      "sha256": "761c1af489d4bbc603734aa71c11a67437d290c400e55c8d1b70952985063258"
+    },
+    "Install_Jarvis.cmd": {
+      "bytes": 213,
+      "sha256": "67417176244fe03b9230c7140da19a8f114ef6bd8c4aadba1519ea1b00930592"
+    },
+    "Install_Media.cmd": {
+      "bytes": 212,
+      "sha256": "ed4769fdeb741175a99cc63233dc25305da91115d2cf3631ede531363be32ab0"
+    },
+    "Install_Models.cmd": {
+      "bytes": 133,
+      "sha256": "19b3fb8025714ec677902a0990f3605eb331611eb405e39fddded2525973337a"
+    },
+    "Install_Voice.cmd": {
+      "bytes": 132,
+      "sha256": "f7ce82e36c906a75b22a8891df94d4eca258918b7d0d4f6f113256e7bd051164"
+    },
+    "Native_Check.cmd": {
+      "bytes": 95,
+      "sha256": "6ffe26cb8e1bd09a8ad2347e423d08bb6e74e8d36e8e7d17cc5580477dbe911e"
+    },
+    "README.md": {
+      "bytes": 1880,
+      "sha256": "0797e01a00819e6e80dfcdfc4efc9377e574a6aec96ec6f06ee27b76d7a695c2"
+    },
+    "SETUP_STEP_BY_STEP.md": {
+      "bytes": 25950,
+      "sha256": "38739e686204b76ec12a08fabcf3f19cc63c213eaa2eac02a8f6e7b950913507"
+    },
+    "START_HERE.txt": {
+      "bytes": 476,
+      "sha256": "87a8cabdea8dea1009f37388e2ac397939c49cb5c028604de3a03d11606ffeb5"
+    },
+    "Start_Jarvis.cmd": {
+      "bytes": 424,
+      "sha256": "5b66fdf8a7c60f82544ba1aef872eeee67e5b1c9ac4c4cab00b8c656db04b314"
+    },
+    "TEST_REPORT.md": {
+      "bytes": 6305,
+      "sha256": "661d39ffd7f3e8833744e7906b6e048ea26149048fc541bfe7bcad1ad620df02"
+    },
+    "THIRD_PARTY_NOTICES.md": {
+      "bytes": 1522,
+      "sha256": "55ea372b1f57adde991a915096153c55bcab70f787174db02655b0afba9f8a8b"
+    },
+    "Test_Jarvis.cmd": {
+      "bytes": 92,
+      "sha256": "0b1218fb92fa77f3854fe81e764d089682a42c627685bb8a133500fb789f4a92"
+    },
+    "apply_candidate.sh": {
+      "bytes": 130,
+      "sha256": "c733d78b8a991a13ce2d6a473907db1238d6e18d55e1d19959756c7e79469222"
+    },
+    "constraints.txt": {
+      "bytes": 2078,
+      "sha256": "ea1a626a3742ee68e2a3cdbfca63ab510964e311a444ad7fe490d555c5d7e660"
+    },
+    "docs/BEHAVIOR_EVALUATION.md": {
+      "bytes": 1989,
+      "sha256": "a2cb3a0d9a74df5e54c13b0b250a7f4274ece1b79065781c0a64d28ee24789f4"
+    },
+    "docs/Design_Baseline_v0.1.txt": {
+      "bytes": 18749,
+      "sha256": "e70f2c4fee6645e6badbe163bf5270c6c966a10399f98069aebada4dbd795aa9"
+    },
+    "docs/image_to_video_api.json": {
+      "bytes": 915,
+      "sha256": "32268e527a4ffbff8c865bd2562c46d28677065fb570c9e0a7fc612127d97991"
+    },
+    "docs/img2img_api.json": {
+      "bytes": 801,
+      "sha256": "c9681f3b202c7c0576c8f5b171f21f028bcc3f6b3745e35f2475aa84eb900f59"
+    },
+    "docs/original-windows/ApplyCandidate.ps1": {
+      "bytes": 1835,
+      "sha256": "52005ad6c95d621b2c9718b5ed93960e318a16a1791479d89fbc0ec55a6d7242"
+    },
+    "docs/original-windows/Apply_Candidate.cmd": {
+      "bytes": 134,
+      "sha256": "2895b16fb4b37cc1e2b771c4625e9d1939d045a394d049047270bf51deb266db"
+    },
+    "docs/original-windows/FEATURE_STATUS.md": {
+      "bytes": 6440,
+      "sha256": "edfc6c35c24981aae6fad24be5a00068be30f110f2d3a0e254494611094182c6"
+    },
+    "docs/original-windows/Install.ps1": {
+      "bytes": 3085,
+      "sha256": "f7d3f17abdc81164afcf564fcd44d15062ceec690a8d7a80c8af878d07e23cc9"
+    },
+    "docs/original-windows/InstallModels.ps1": {
+      "bytes": 1200,
+      "sha256": "080bf5e302442e55907135e78240c0f40df83fc007ee8cf0dc5355fad0b59587"
+    },
+    "docs/original-windows/InstallVoice.ps1": {
+      "bytes": 603,
+      "sha256": "a02bfee3b0f4b4734bbaae5e55be6e8cda197c01490fb44500fec1b6ca2f06f6"
+    },
+    "docs/original-windows/Install_Images.cmd": {
+      "bytes": 158,
+      "sha256": "761c1af489d4bbc603734aa71c11a67437d290c400e55c8d1b70952985063258"
+    },
+    "docs/original-windows/Install_Jarvis.cmd": {
+      "bytes": 213,
+      "sha256": "67417176244fe03b9230c7140da19a8f114ef6bd8c4aadba1519ea1b00930592"
+    },
+    "docs/original-windows/Install_Media.cmd": {
+      "bytes": 212,
+      "sha256": "ed4769fdeb741175a99cc63233dc25305da91115d2cf3631ede531363be32ab0"
+    },
+    "docs/original-windows/Install_Models.cmd": {
+      "bytes": 133,
+      "sha256": "19b3fb8025714ec677902a0990f3605eb331611eb405e39fddded2525973337a"
+    },
+    "docs/original-windows/Install_Voice.cmd": {
+      "bytes": 132,
+      "sha256": "f7ce82e36c906a75b22a8891df94d4eca258918b7d0d4f6f113256e7bd051164"
+    },
+    "docs/original-windows/Native_Check.cmd": {
+      "bytes": 95,
+      "sha256": "6ffe26cb8e1bd09a8ad2347e423d08bb6e74e8d36e8e7d17cc5580477dbe911e"
+    },
+    "docs/original-windows/README.md": {
+      "bytes": 1157,
+      "sha256": "d47f7dfb8b6050428b5d86b00aa8212444d825c5dd4a3410f3e6799ce181513b"
+    },
+    "docs/original-windows/SETUP_STEP_BY_STEP.md": {
+      "bytes": 26029,
+      "sha256": "fd7e5baabe91f8d5f8d773bfa1e590105501bcc8495a08fa84e2ddd7faabd2bc"
+    },
+    "docs/original-windows/START_HERE.txt": {
+      "bytes": 1482,
+      "sha256": "a2376471727984a747b9ddbd15c69b5c61477aa63c06967da5fda66f67358c07"
+    },
+    "docs/original-windows/Start_Jarvis.cmd": {
+      "bytes": 424,
+      "sha256": "5b66fdf8a7c60f82544ba1aef872eeee67e5b1c9ac4c4cab00b8c656db04b314"
+    },
+    "docs/original-windows/TEST_REPORT.md": {
+      "bytes": 6473,
+      "sha256": "ca0930c7b7946cea79342aaad6d0fbb44a18012d1104204b7f06fafe69f895d9"
+    },
+    "docs/original-windows/Test_Jarvis.cmd": {
+      "bytes": 92,
+      "sha256": "0b1218fb92fa77f3854fe81e764d089682a42c627685bb8a133500fb789f4a92"
+    },
+    "docs/txt2img_api.json": {
+      "bytes": 742,
+      "sha256": "f231d481d8df51250b2465916513ee6da1b8de80e07840c70db71f49fb39cc33"
+    },
+    "install.sh": {
+      "bytes": 2740,
+      "sha256": "5131f85fe6ae41b2b1034edfb8d5c355237c598fdad5e3228f5636d4873e9258"
+    },
+    "install_images.sh": {
+      "bytes": 191,
+      "sha256": "71688f60945ab9b0b71b8d6a771d025a4bf5515ad58356bff9404cd5143e4a4b"
+    },
+    "install_media.sh": {
+      "bytes": 391,
+      "sha256": "9963d7cf6b1c19c11dd3219f30e6f073345ba832703bfc30dbddee743f3d43f4"
+    },
+    "install_models.sh": {
+      "bytes": 684,
+      "sha256": "22352afb1481bbb4d8b57fe645ef761c7112ef513043ce79d284bb130e0d0770"
+    },
+    "install_voice.sh": {
+      "bytes": 542,
+      "sha256": "d562b9f7d6416b011378566c12f88bdf2f5179832632fec0ab84be60378e538c"
+    },
+    "jarvis/__init__.py": {
+      "bytes": 38,
+      "sha256": "89e8cf162304ed1f2a92eb2f037fd8890311a0a4cb3ce9b9b5cd6b8d893f378b"
+    },
+    "jarvis/__main__.py": {
+      "bytes": 636,
+      "sha256": "84af6e5ffd08c9e3ac3672c1f1322d59405488c713618d78a117cd9ed3408efc"
+    },
+    "jarvis/accounts.py": {
+      "bytes": 11324,
+      "sha256": "dbaaaca2694d5c4704129fba44918f4a49e004a0c57cb826e662334ca35a1f2d"
+    },
+    "jarvis/artifacts.py": {
+      "bytes": 6729,
+      "sha256": "e699f2a86a43d3b9800e4769a897421fdcfae2c81caa0c62de7bf9c249ac56c9"
+    },
+    "jarvis/config.py": {
+      "bytes": 3234,
+      "sha256": "7e72e1a9793c2b2adac9ae521cde5b1c3ec04b6745c064e2f2f3600703647ddb"
+    },
+    "jarvis/diagnostics.py": {
+      "bytes": 1236,
+      "sha256": "e4a3ceb28fb46f2b0bbf491c054571e7c8fd1b2aa42a6d63a400a865c20befa8"
+    },
+    "jarvis/engine.py": {
+      "bytes": 7437,
+      "sha256": "e3041757ebe6960a981be1a617da41484df0eb310dcc951d79bf91cf0d068f1a"
+    },
+    "jarvis/gui.py": {
+      "bytes": 35942,
+      "sha256": "471b4dc6a1a240f73bab744b3dcad2a11e0d282c3d4809cdeb946932384e553f"
+    },
+    "jarvis/improvement.py": {
+      "bytes": 781,
+      "sha256": "2fe1b67ec791d9ca61a6f0ad39abe450122ed4f34165d69d18ac1461ef4eea8b"
+    },
+    "jarvis/linux_desktop.py": {
+      "bytes": 4640,
+      "sha256": "52b028575ee8d783e4b72355f078e244859c8d8cf660ecde288c02c05610a1b0"
+    },
+    "jarvis/media.py": {
+      "bytes": 4253,
+      "sha256": "d1deae481246d5825741f7ff96fbc5900f61b99fb7724a50ff8029bb6a489653"
+    },
+    "jarvis/models.py": {
+      "bytes": 3707,
+      "sha256": "db49e9ea63c355bb2ea596dc0b770454800e4efdb6b50bd1dbcfe24b1121f276"
+    },
+    "jarvis/net.py": {
+      "bytes": 2739,
+      "sha256": "fa27dc193bee707e2a634cd3ede20566c429ec3bc8ba01f78beff0533f783e1f"
+    },
+    "jarvis/parsing.py": {
+      "bytes": 1318,
+      "sha256": "5e7aa92a44d8f600e63cec77f87aff37ffde5407243b12e6f117f9d460dfe448"
+    },
+    "jarvis/peers.py": {
+      "bytes": 13650,
+      "sha256": "5fc40ce4c5a627137fccd56c134bf5f176506e1f4f788d9ac47c0562e52c93da"
+    },
+    "jarvis/policy.py": {
+      "bytes": 2799,
+      "sha256": "bf0ad937a075bc46085f4040b3508d11e0ecd1a875ded0091bb27533714a51ae"
+    },
+    "jarvis/scheduler.py": {
+      "bytes": 5121,
+      "sha256": "dde8c9b0be891748b9bd4be4fc21821d6d4f13646f42f50551abc1c131e6cc3d"
+    },
+    "jarvis/screen.py": {
+      "bytes": 4013,
+      "sha256": "5a25c4fed4536c93c4f07bb718da8eccaf0514ad951f6a83cdd66b8707de49f9"
+    },
+    "jarvis/store.py": {
+      "bytes": 4075,
+      "sha256": "94d7f2f52f5e12304e51d348098819acdf274aa457fef1fb6250f615603f8ca0"
+    },
+    "jarvis/tools.py": {
+      "bytes": 29090,
+      "sha256": "5588b2c4bd9513bca7e76cd3a3540320b5e7c3b0f18f8ba7f818e477fb5b3b35"
+    },
+    "jarvis/voice.py": {
+      "bytes": 6664,
+      "sha256": "5a09a3a4121dfd10ba972ade56dfa3b212bd1dc382edf1739f7826c4ccbdd679"
+    },
+    "native_check.sh": {
+      "bytes": 122,
+      "sha256": "562e4e44a55d949e8da54b150284af5e4d7a6bd989ac7d276615b8551c245d07"
+    },
+    "requirements-linux.lock": {
+      "bytes": 9846,
+      "sha256": "fbc486ed5d0049797a123657e0db6ab4b55121fe447c2bbb20d2d241afdaa05c"
+    },
+    "requirements-voice.txt": {
+      "bytes": 265,
+      "sha256": "4476c93ebf2a858809bb2f2ae47a98acd4fd5a9dabac1410efb248f0011af7c6"
+    },
+    "requirements.txt": {
+      "bytes": 518,
+      "sha256": "172c78d7fb9e4bd548e7a9a6edd0c66e90a6fe7d126738ad5d0a78748994dae5"
+    },
+    "scripts/ApplyCandidate.ps1": {
+      "bytes": 1835,
+      "sha256": "52005ad6c95d621b2c9718b5ed93960e318a16a1791479d89fbc0ec55a6d7242"
+    },
+    "scripts/Install.ps1": {
+      "bytes": 3085,
+      "sha256": "f7d3f17abdc81164afcf564fcd44d15062ceec690a8d7a80c8af878d07e23cc9"
+    },
+    "scripts/InstallModels.ps1": {
+      "bytes": 1200,
+      "sha256": "080bf5e302442e55907135e78240c0f40df83fc007ee8cf0dc5355fad0b59587"
+    },
+    "scripts/InstallVoice.ps1": {
+      "bytes": 603,
+      "sha256": "a02bfee3b0f4b4734bbaae5e55be6e8cda197c01490fb44500fec1b6ca2f06f6"
+    },
+    "scripts/apply_candidate.py": {
+      "bytes": 3231,
+      "sha256": "c78143597181d1084300757dc6c1b378a3f7c7a3ff38977455097d2ef1f9dcb9"
+    },
+    "scripts/download_voice.py": {
+      "bytes": 1809,
+      "sha256": "79d9433c5dc7783d8f79da7d9afe8f33d04881f637bed816eb74ea0222747aac"
+    },
+    "scripts/linux_native_smoke.py": {
+      "bytes": 7842,
+      "sha256": "bc37a9aefa372e25089eae856f0e63c39d020a72a3ce639c064ebb7a4da85705"
+    },
+    "scripts/native_check.py": {
+      "bytes": 1976,
+      "sha256": "06734d33827c1c84919a077c657fa56d9b95f20b067e97c7a5c9386655f343b5"
+    },
+    "scripts/run_tests.py": {
+      "bytes": 1098,
+      "sha256": "dcbc9fff266b34fb7c9532f4d34a9420aa3150f058cb9e1cc0923793a9d80722"
+    },
+    "scripts/setup_desktop.py": {
+      "bytes": 596,
+      "sha256": "12e8b19690550cc2bc74498855572adf2bc1be0b6e0d1476da60e93a32cf191b"
+    },
+    "scripts/ui_smoke.py": {
+      "bytes": 4112,
+      "sha256": "ce560a447f18619940dc841ac80095aa0034ec122e4f1e2fd03d5ccb2c26b072"
+    },
+    "scripts/verify_release.py": {
+      "bytes": 1088,
+      "sha256": "45b154d6f1fcb18efbd4e577f65617e34965b3b744f81a67bccf76b0342d5483"
+    },
+    "scripts/voice_smoke.py": {
+      "bytes": 1348,
+      "sha256": "8ccab26db2f038b9d6ace17634523bdb18b5486810c7c878b18bcd5d89d6bb53"
+    },
+    "start_jarvis.sh": {
+      "bytes": 961,
+      "sha256": "2d88ce4ac0f0ee6a642fa78f8df9257e8191c70391c6adbca3d3fb215fc63520"
+    },
+    "test_jarvis.sh": {
+      "bytes": 182,
+      "sha256": "680cc1e7d64b18f67558130a1412edbf0433f5cdb62f1dfed32cfb19e72c88c4"
+    },
+    "tests/common.py": {
+      "bytes": 1591,
+      "sha256": "a3d0ea3157fb4c63e3000d2119f0430caa0ac2454105123dc57033b869786005"
+    },
+    "tests/requirements-native.txt": {
+      "bytes": 89,
+      "sha256": "0249e37c5bb4c71295f07246b6586ea88b02a2de237e0aa69ed574445469b452"
+    },
+    "tests/test_core.py": {
+      "bytes": 13798,
+      "sha256": "22687bd4b7354bbd76989f289b45d83d544f7befcf79364f30d4c7a4978b64f3"
+    },
+    "tests/test_engine.py": {
+      "bytes": 2507,
+      "sha256": "2c4198d1d34e9cd30029cd2d653d2ac085ad64f7a4cf2172e71c74f38c176483"
+    },
+    "tests/test_integrations.py": {
+      "bytes": 8354,
+      "sha256": "764921d4d7ab51c30b73121abc3145cc509bb8b455e57e620f3e083f4bee9b87"
+    },
+    "tests/test_linux.py": {
+      "bytes": 10759,
+      "sha256": "b3d03ed8590ccf0202fa8c080c8ec24b85fb6ed69ffb1ec4ad5381a15775df19"
+    },
+    "tests/test_network.py": {
+      "bytes": 5410,
+      "sha256": "38ccd3887c8ab4fe753640ba95ef63eea0a8de414eda03122d13ea45b1705b39"
+    },
+    "wheelhouse/.pyside6_essentials-6.12.0-cp310-abi3-manylinux_2_34_x86_64.whl.JDhXYj": {
+      "bytes": 16777216,
+      "sha256": "a1c9bd56537ce834047cc91f3724936e461170f598a5aec8a97413c033f09f21"
+    },
+    "wheelhouse/anyio-4.15.1-py3-none-any.whl": {
+      "bytes": 132079,
+      "sha256": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101"
+    },
+    "wheelhouse/attrs-26.1.0-py3-none-any.whl": {
+      "bytes": 67548,
+      "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309"
+    },
+    "wheelhouse/av-18.0.0-cp311-abi3-manylinux_2_28_x86_64.whl": {
+      "bytes": 35536910,
+      "sha256": "ae56b40b6f8b067a8ad2dac664fbfbabac7f7a55b9a7bb031eb99289252bc017"
+    },
+    "wheelhouse/babel-2.18.0-py3-none-any.whl": {
+      "bytes": 10196845,
+      "sha256": "e2b422b277c2b9a9630c1d7903c2a00d0830c409c59ac8cae9081c92f1aeba35"
+    },
+    "wheelhouse/brotli-1.2.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl": {
+      "bytes": 1419762,
+      "sha256": "072e7624b1fc4d601036ab3f4f27942ef772887e876beff0301d261210bca97f"
+    },
+    "wheelhouse/certifi-2026.7.22-py3-none-any.whl": {
+      "bytes": 136983,
+      "sha256": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775"
+    },
+    "wheelhouse/cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl": {
+      "bytes": 221822,
+      "sha256": "c1453022f490d2459a11819d83ad1d586e9ff65a12ac3e705ffebd46d3685dcf"
+    },
+    "wheelhouse/charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl": {
+      "bytes": 257601,
+      "sha256": "3d31298449090ab8d47b7b1b2a555ff73cac7ed438a08b7ac160980c7ebed649"
+    },
+    "wheelhouse/click-8.5.0-py3-none-any.whl": {
+      "bytes": 125251,
+      "sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    "wheelhouse/cloudpickle-3.1.2-py3-none-any.whl": {
+      "bytes": 22228,
+      "sha256": "9acb47f6afd73f60dc1df93bb801b472f05ff42fa6c84167d25cb206be1fbf4a"
+    },
+    "wheelhouse/colorlog-6.12.0-py3-none-any.whl": {
+      "bytes": 12239,
+      "sha256": "30d392604e9110045a2c2aeefc27d7a017abbab63f3a8aee594eac0801df784e"
+    },
+    "wheelhouse/cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl": {
+      "bytes": 4752576,
+      "sha256": "9dab55f57c74c3cad24c323bacbbd04be4705ba6eb0d92e920b1fc4837ed5079"
+    },
+    "wheelhouse/csvw-4.1.0-py2.py3-none-any.whl": {
+      "bytes": 69495,
+      "sha256": "d432d4cccd8dcdf31ccb2272d6d7ad40a9ebde7de3c7d6ced9033afb23bb76dd"
+    },
+    "wheelhouse/ctranslate2-4.8.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl": {
+      "bytes": 40256883,
+      "sha256": "7e161eb031fcf2a5d81ce3a1cd8be4954c7df758d96cfaba57aeecc69a0c00ae"
+    },
+    "wheelhouse/ddgs-9.6.1-py3-none-any.whl": {
+      "bytes": 41577,
+      "sha256": "e7d7e0c4dbae3f287627b9f6e411278256d7859d017bbad45b8229c230bf5270"
+    },
+    "wheelhouse/dlinfo-2.0.0-py3-none-any.whl": {
+      "bytes": 3654,
+      "sha256": "b32cc18e3ea67c0ca9ca409e5b41eed863bd1363dbc9dd3de90fedf11b61e7bc"
+    },
+    "wheelhouse/espeakng_loader-0.2.4-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": {
+      "bytes": 10078484,
+      "sha256": "08721baf27d13d461f6be6eed9a65277e70d68234ff484fd8b9897b222cdcb6d"
+    },
+    "wheelhouse/et_xmlfile-2.0.0-py3-none-any.whl": {
+      "bytes": 18059,
+      "sha256": "7a91720bc756843502c3b7504c77b8fe44217c85c537d85037f0f536151b2caa"
+    },
+    "wheelhouse/faster_whisper-1.2.0-py3-none-any.whl": {
+      "bytes": 1118581,
+      "sha256": "e5535628fe93b5123029b410fd8edba2d28f8cee9f8fff8119138e5a9d81afbe"
+    },
+    "wheelhouse/filelock-4.2.0-py3-none-any.whl": {
+      "bytes": 135032,
+      "sha256": "2ff5690882e8cdb00ef31fb3d01a3094c29f30985426c59495afb1733f3b7238"
+    },
+    "wheelhouse/flatbuffers-25.12.19-py2.py3-none-any.whl": {
+      "bytes": 26661,
+      "sha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4"
+    },
+    "wheelhouse/fsspec-2026.9.0-py3-none-any.whl": {
+      "bytes": 221738,
+      "sha256": "8dd6e646e99ea382bd85f97a45e6b526a442d79423a7dc673f1e2756d05fcb5f"
+    },
+    "wheelhouse/google_api_core-2.42.0-py3-none-any.whl": {
+      "bytes": 221364,
+      "sha256": "b1bdf4f72dc4f910736ce4ba49038352effbbc309579215107649b22973a1317"
+    },
+    "wheelhouse/google_api_python_client-2.185.0-py3-none-any.whl": {
+      "bytes": 14453595,
+      "sha256": "00fe173a4b346d2397fbe0d37ac15368170dfbed91a0395a66ef2558e22b93fc"
+    },
+    "wheelhouse/google_auth-2.62.0-py3-none-any.whl": {
+      "bytes": 267911,
+      "sha256": "4ff4319aeb4ad128409759d397a9fcafad126d0031d241cc0dd6b9a00b43e3f3"
+    },
+    "wheelhouse/google_auth_httplib2-0.2.0-py2.py3-none-any.whl": {
+      "bytes": 9253,
+      "sha256": "b65a0a2123300dd71281a7bf6e64d65a0759287df52729bdd1ae2e47dc311a3d"
+    },
+    "wheelhouse/google_auth_oauthlib-1.2.2-py3-none-any.whl": {
+      "bytes": 19072,
+      "sha256": "fd619506f4b3908b5df17b65f39ca8d66ea56986e5472eb5978fd8f3786f00a2"
+    },
+    "wheelhouse/googleapis_common_protos-1.75.5-py3-none-any.whl": {
+      "bytes": 307737,
+      "sha256": "d7285525c23039db98f2463e6d5a4f9b958b94d497f03a844ece3259c4e72d5d"
+    },
+    "wheelhouse/h11-0.16.0-py3-none-any.whl": {
+      "bytes": 37515,
+      "sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86"
+    },
+    "wheelhouse/h2-4.4.1-py3-none-any.whl": {
+      "bytes": 62636,
+      "sha256": "0e25f1462b23c9cb82d9eb02e28bc706dac2a68cb457c6a0d74d63c8a2a5d0e6"
+    },
+    "wheelhouse/hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl": {
+      "bytes": 4212180,
+      "sha256": "2814a6e999d13464c4d679b788cc5d784eb5a4edfc638a31f10e9a11ab531ef8"
+    },
+    "wheelhouse/hpack-4.2.0-py3-none-any.whl": {
+      "bytes": 34246,
+      "sha256": "858ac0b02280fa582b5080d68db0899c62a80375e0e5413a74970c5e518b6986"
+    },
+    "wheelhouse/httpcore-1.0.9-py3-none-any.whl": {
+      "bytes": 78784,
+      "sha256": "2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55"
+    },
+    "wheelhouse/httpcore2-2.13.1-py3-none-any.whl": {
+      "bytes": 83423,
+      "sha256": "e1e05d4f25f7d7d496bfb96748f6f4b67657b03da069b3a68c36069f3db73d0a"
+    },
+    "wheelhouse/httplib2-0.32.0-py3-none-any.whl": {
+      "bytes": 93148,
+      "sha256": "dc6705cacdf3fb0a2aba7629fa33c90fd93e30035db0c157325826be177e4816"
+    },
+    "wheelhouse/httpx-0.28.1-py3-none-any.whl": {
+      "bytes": 73517,
+      "sha256": "d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad"
+    },
+    "wheelhouse/httpx2-2.13.1-py3-none-any.whl": {
+      "bytes": 95597,
+      "sha256": "6dff50fabc270ee5fd25d845d0b078ed20564579744d6d962850975996d2f9a4"
+    },
+    "wheelhouse/huggingface_hub-2.2.0-py3-none-any.whl": {
+      "bytes": 839884,
+      "sha256": "1667f145dc56dc210d60966069397df9ecfca9607a5d43db88b308c89dae56b3"
+    },
+    "wheelhouse/hyperframe-6.1.0-py3-none-any.whl": {
+      "bytes": 13007,
+      "sha256": "b03380493a519fce58ea5af42e4a42317bf9bd425596f7a0835ffce80f1a42e5"
+    },
+    "wheelhouse/idna-3.20-py3-none-any.whl": {
+      "bytes": 69583,
+      "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c"
+    },
+    "wheelhouse/isodate-0.7.2-py3-none-any.whl": {
+      "bytes": 22320,
+      "sha256": "28009937d8031054830160fce6d409ed342816b543597cece116d966c6d99e15"
+    },
+    "wheelhouse/jaraco.classes-3.4.0-py3-none-any.whl": {
+      "bytes": 6777,
+      "sha256": "f662826b6bed8cace05e7ff873ce0f9283b5c924470fe664fff1c2f00f581790"
+    },
+    "wheelhouse/jaraco_context-6.1.2-py3-none-any.whl": {
+      "bytes": 7871,
+      "sha256": "bf8150b79a2d5d91ae48629d8b427a8f7ba0e1097dd6202a9059f29a36379535"
+    },
+    "wheelhouse/jaraco_functools-4.6.0-py3-none-any.whl": {
+      "bytes": 11677,
+      "sha256": "99e3dc0060c5cbe8fcd1cdb36258e2a65ca40f1566b2033b12abb1bb44dd3c30"
+    },
+    "wheelhouse/jeepney-0.9.0-py3-none-any.whl": {
+      "bytes": 49010,
+      "sha256": "97e5714520c16fc0a45695e5365a2e11b81ea79bba796e26f9f1d178cb182683"
+    },
+    "wheelhouse/joblib-1.6.0-py3-none-any.whl": {
+      "bytes": 306115,
+      "sha256": "3dbbf9f6e4b592a2357b854608e980fe6390d131d7a82f011a377ef2ebef7aba"
+    },
+    "wheelhouse/jsonschema-4.26.0-py3-none-any.whl": {
+      "bytes": 90630,
+      "sha256": "d489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce"
+    },
+    "wheelhouse/jsonschema_specifications-2025.9.1-py3-none-any.whl": {
+      "bytes": 18437,
+      "sha256": "98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe"
+    },
+    "wheelhouse/keyring-25.6.0-py3-none-any.whl": {
+      "bytes": 39085,
+      "sha256": "552a3f7af126ece7ed5c89753650eec89c7eaae8617d0aa4d9ad2b75111266bd"
+    },
+    "wheelhouse/kokoro_onnx-0.4.9-py3-none-any.whl": {
+      "bytes": 17794,
+      "sha256": "e0b51d62525166af795db715c7f0efb80233621b5ddc0766ed68995545589d9e"
+    },
+    "wheelhouse/language_tags-1.3.1-py3-none-any.whl": {
+      "bytes": 216654,
+      "sha256": "f7db7ef8879523019603e09644a86d95ba60595ce5e5ea82d46e8971b0f68f7b"
+    },
+    "wheelhouse/lxml-6.1.3-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl": {
+      "bytes": 5244675,
+      "sha256": "909f4e927bb051f7740d6367285fc60cdcfdaf0258c2dba4ff5ba7eadadc250c"
+    },
+    "wheelhouse/more_itertools-11.2.1-py3-none-any.whl": {
+      "bytes": 74405,
+      "sha256": "35a7377edd1dd6608dcb2cdf534ded55ea32d49448875ad042cd3f879fb1ded0"
+    },
+    "wheelhouse/mouseinfo-0.1.3-py3-none-any.whl": {
+      "bytes": 10944,
+      "sha256": "001f756076317572d417bb2502b87ac78eeade9296d1bed87c8c44556b1f9035"
+    },
+    "wheelhouse/msal-1.39.0-py3-none-any.whl": {
+      "bytes": 131629,
+      "sha256": "2d2577886906cd7293850dffa2da29119966c213bfc6ec0cecf8bf7621e1ca77"
+    },
+    "wheelhouse/mss-10.1.0-py3-none-any.whl": {
+      "bytes": 24525,
+      "sha256": "9179c110cadfef5dc6dc4a041a0cd161c74c379218648e6640b48c6b5cfe8918"
+    },
+    "wheelhouse/numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": {
+      "bytes": 16527618,
+      "sha256": "fd83c01228a688733f1ded5201c678f0c53ecc1006ffbc404db9f7a899ac6249"
+    },
+    "wheelhouse/oauthlib-4.0.0-py3-none-any.whl": {
+      "bytes": 159715,
+      "sha256": "624c28c13a0a59cabf9747dfa52af63be3e512a7f2714df16e91b5b3a145e6cd"
+    },
+    "wheelhouse/onnxruntime-1.31.0-cp312-cp312-manylinux_2_28_x86_64.whl": {
+      "bytes": 23760984,
+      "sha256": "5e129d6c56abd53e659cb70f00a108d6824086470ff99c2e47a82e5786563db3"
+    },
+    "wheelhouse/openpyxl-3.1.5-py2.py3-none-any.whl": {
+      "bytes": 250910,
+      "sha256": "5282c12b107bffeef825f4617dc029afaf41d0ea60823bbb665ef3079dc79de2"
+    },
+    "wheelhouse/opentelemetry_api-1.45.1-py3-none-any.whl": {
+      "bytes": 60256,
+      "sha256": "b31553efa588ae44bc306f863c785c5333a9ecc091248c6ee68b4b6c87fdedfb"
+    },
+    "wheelhouse/packaging-26.3-py3-none-any.whl": {
+      "bytes": 129956,
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+    },
+    "wheelhouse/phonemizer_fork-3.3.2-py3-none-any.whl": {
+      "bytes": 82700,
+      "sha256": "97305c76f4183b3825dae8f4c032265fe78c9946ce58c47d4b62161349264b74"
+    },
+    "wheelhouse/pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl": {
+      "bytes": 7144542,
+      "sha256": "42d63be3af4f9b951b199b0a9d23365d37ab14687e6d77b74940432c8515c4ca"
+    },
+    "wheelhouse/primp-2.0.1-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": {
+      "bytes": 6585593,
+      "sha256": "9a7be373adfded677a9092ae2743873d5c8a9573148d617a189d26715f7d8ea5"
+    },
+    "wheelhouse/proto_plus-1.29.0-py3-none-any.whl": {
+      "bytes": 50786,
+      "sha256": "8acd070469a7aaf43f440b022ef9757c8cac1a9f866e933f59ae98669ddc6c8b"
+    },
+    "wheelhouse/protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl": {
+      "bytes": 343223,
+      "sha256": "89f23aa53c24553a2416fd4fd1ec06f74fa42b14b546d8883128813f775bbfd2"
+    },
+    "wheelhouse/pyasn1-0.6.4-py3-none-any.whl": {
+      "bytes": 84410,
+      "sha256": "deda9277cfd454080ec40b207fb6df82206a3a2688735233cdcd8d3d565f088b"
+    },
+    "wheelhouse/pyasn1_modules-0.4.2-py3-none-any.whl": {
+      "bytes": 181259,
+      "sha256": "29253a9207ce32b64c3ac6600edc75368f98473906e8fd1043bd6b5b1de2c14a"
+    },
+    "wheelhouse/pyautogui-0.9.54-py3-none-any.whl": {
+      "bytes": 37684,
+      "sha256": "2cba48723a50b229f10cadfcad242f8c83f855f0cca81c9de982f8be268fd517"
+    },
+    "wheelhouse/pycparser-3.11-py3-none-any.whl": {
+      "bytes": 51178,
+      "sha256": "51d5a8ba2be0bbe440b99d2112604c95bbbc3c2748a64260186c541e1729cd80"
+    },
+    "wheelhouse/pygetwindow-0.0.9-py3-none-any.whl": {
+      "bytes": 11120,
+      "sha256": "d184cda18e074273c02fdefb7fab1aed900bdda349ae9bc76f5b45c771aa50da"
+    },
+    "wheelhouse/pyjwt-2.15.1-py3-none-any.whl": {
+      "bytes": 33860,
+      "sha256": "42d59d631f7768a1028a64c7ff581a9bf7519804daf91fc5b6c56e30eec5e193"
+    },
+    "wheelhouse/pymsgbox-2.0.1-py3-none-any.whl": {
+      "bytes": 9994,
+      "sha256": "5de8ec19bca2ca7e6c09d39c817c83f17c75cee80275235f43a9931db699f73b"
+    },
+    "wheelhouse/pyparsing-3.3.3-py3-none-any.whl": {
+      "bytes": 126420,
+      "sha256": "ece8c00a69cf01b45d0b1dedabb469c90d8caf996d4fda40f147627a122849a4"
+    },
+    "wheelhouse/pypdf-6.21.0-py3-none-any.whl": {
+      "bytes": 405135,
+      "sha256": "3aec619699dacb1b73f57e87d9adaa4424814517b2cc028de20adba5a37af4c4"
+    },
+    "wheelhouse/pyperclip-1.11.0-py3-none-any.whl": {
+      "bytes": 11063,
+      "sha256": "299403e9ff44581cb9ba2ffeed69c7aa96a008622ad0c46cb575ca75b5b84273"
+    },
+    "wheelhouse/pyrect-0.2.0-py2.py3-none-any.whl": {
+      "bytes": 11279,
+      "sha256": "ebc366bcc3d08b99da8814caa905129b9dab3e09e26dfacb780a13bd9155ac17"
+    },
+    "wheelhouse/pyscreeze-1.0.1-py3-none-any.whl": {
+      "bytes": 14459,
+      "sha256": "7fdcbbcd45d152a60d87598a7bfaa7c73e169cf133ec56d85b252bda7876aee9"
+    },
+    "wheelhouse/pyside6_essentials-6.12.0-cp310-abi3-manylinux_2_34_x86_64.whl": {
+      "bytes": 84346433,
+      "sha256": "16f4b5e41daf49235ae048458243da9efe5f3d8040f9cc5aa454ce69893d3bd9"
+    },
+    "wheelhouse/python3_xlib-0.15-py3-none-any.whl": {
+      "bytes": 109548,
+      "sha256": "00b2a9443c4986ad0a47a0950fb231e00dbf8b9f060322fab06c771f4a568a3c"
+    },
+    "wheelhouse/python_dateutil-2.9.0.post0-py2.py3-none-any.whl": {
+      "bytes": 229892,
+      "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"
+    },
+    "wheelhouse/python_docx-1.2.0-py3-none-any.whl": {
+      "bytes": 252987,
+      "sha256": "3fd478f3250fbbbfd3b94fe1e985955737c145627498896a8a6bf81f4baf66c7"
+    },
+    "wheelhouse/python_pptx-1.0.2-py3-none-any.whl": {
+      "bytes": 472788,
+      "sha256": "160838e0b8565a8b1f67947675886e9fea18aa5e795db7ae531606d68e785cba"
+    },
+    "wheelhouse/pytweening-1.2.0-py3-none-any.whl": {
+      "bytes": 8114,
+      "sha256": "66258bd9501d888a57410f7fed5a73693aba2ba82317f530b6bf27f84f824573"
+    },
+    "wheelhouse/pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl": {
+      "bytes": 807870,
+      "sha256": "ba1cc08a7ccde2d2ec775841541641e4548226580ab850948cbfda66a1befcdc"
+    },
+    "wheelhouse/rdflib-7.6.0-py3-none-any.whl": {
+      "bytes": 615416,
+      "sha256": "30c0a3ebf4c0e09215f066be7246794b6492e054e782d7ac2a34c9f70a15e0dd"
+    },
+    "wheelhouse/referencing-0.37.0-py3-none-any.whl": {
+      "bytes": 26766,
+      "sha256": "381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231"
+    },
+    "wheelhouse/regex-2026.9.29-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl": {
+      "bytes": 807783,
+      "sha256": "39ab5894d971f9ac68baa6eca5c50387db579cfcacf36ae8df3feceb1815e6d0"
+    },
+    "wheelhouse/reportlab-4.4.4-py3-none-any.whl": {
+      "bytes": 1954981,
+      "sha256": "299b3b0534e7202bb94ed2ddcd7179b818dcda7de9d8518a57c85a58a1ebaadb"
+    },
+    "wheelhouse/requests-2.34.2-py3-none-any.whl": {
+      "bytes": 73075,
+      "sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0"
+    },
+    "wheelhouse/requests_oauthlib-2.0.0-py2.py3-none-any.whl": {
+      "bytes": 24179,
+      "sha256": "7dd8a5c40426b779b0868c404bdef9768deccf22749cde15852df527e6269b36"
+    },
+    "wheelhouse/rfc3986-1.5.0-py2.py3-none-any.whl": {
+      "bytes": 31976,
+      "sha256": "a86d6e1f5b1dc238b218b012df0aa79409667bb209e58da56d0b94704e712a97"
+    },
+    "wheelhouse/rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": {
+      "bytes": 371261,
+      "sha256": "addeda51556dac7c1a2f14cda62db8b621cd12afba3091d03a96c72932387eab"
+    },
+    "wheelhouse/secretstorage-3.5.0-py3-none-any.whl": {
+      "bytes": 15554,
+      "sha256": "0ce65888c0725fcb2c5bc0fdb8e5438eece02c523557ea40ce0703c266248137"
+    },
+    "wheelhouse/segments-2.4.0-py2.py3-none-any.whl": {
+      "bytes": 16321,
+      "sha256": "4021dc67f201cc03c864c74c618bdb163b1af629da3040babbaa37d8813f3db0"
+    },
+    "wheelhouse/shiboken6-6.12.0-cp310-abi3-manylinux_2_34_x86_64.whl": {
+      "bytes": 279268,
+      "sha256": "3bde565bb0890044b5c7f63808adddede5abc241e9395a2bfed61919884d6240"
+    },
+    "wheelhouse/six-1.17.0-py2.py3-none-any.whl": {
+      "bytes": 11050,
+      "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+    },
+    "wheelhouse/socksio-1.0.0-py3-none-any.whl": {
+      "bytes": 12763,
+      "sha256": "95dc1f15f9b34e8d7b16f06d74b8ccf48f609af32ab33c608d08761c5dcbb1f3"
+    },
+    "wheelhouse/sounddevice-0.5.2-py3-none-any.whl": {
+      "bytes": 32450,
+      "sha256": "82375859fac2e73295a4ab3fc60bd4782743157adc339561c1f1142af472f505"
+    },
+    "wheelhouse/soundfile-0.13.1-py2.py3-none-manylinux_2_28_x86_64.whl": {
+      "bytes": 1313646,
+      "sha256": "03267c4e493315294834a0870f31dbb3b28a95561b80b134f0bd3cf2d5f0e618"
+    },
+    "wheelhouse/termcolor-3.3.0-py3-none-any.whl": {
+      "bytes": 7734,
+      "sha256": "cf642efadaf0a8ebbbf4bc7a31cec2f9b5f21a9f726f4ccbb08192c9c26f43a5"
+    },
+    "wheelhouse/tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": {
+      "bytes": 3396193,
+      "sha256": "376851d22bcf9d650a5c3090bb83e6cf9e895fbf0595369fa4cd43c1f69b5f87"
+    },
+    "wheelhouse/tqdm-4.70.1-py3-none-any.whl": {
+      "bytes": 80199,
+      "sha256": "c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73"
+    },
+    "wheelhouse/truststore-0.10.5-py3-none-any.whl": {
+      "bytes": 19017,
+      "sha256": "9aaaedaefaf06d8b206278cf8b5012bc897f485a874503501e12d776df78951c"
+    },
+    "wheelhouse/typing_extensions-4.16.0-py3-none-any.whl": {
+      "bytes": 45571,
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+    },
+    "wheelhouse/uritemplate-4.2.0-py3-none-any.whl": {
+      "bytes": 11488,
+      "sha256": "962201ba1c4edcab02e60f9a0d3821e82dfc5d2d6662a21abd533879bdb8a686"
+    },
+    "wheelhouse/urllib3-2.8.0-py3-none-any.whl": {
+      "bytes": 135717,
+      "sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3"
+    },
+    "wheelhouse/uv-0.13.4-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": {
+      "bytes": 17181168,
+      "sha256": "05e4332791b4d55b6dde8695b7fa6079b26991519f44760887c5dfbd5ca4fe53"
+    },
+    "wheelhouse/xlsxwriter-3.2.9-py3-none-any.whl": {
+      "bytes": 175315,
+      "sha256": "9a5db42bc5dff014806c58a20b9eae7322a134abb6fce3c92c181bfb275ec5b3"
+    }
+  }
+}

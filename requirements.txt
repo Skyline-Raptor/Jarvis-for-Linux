@@ -1,0 +1,22 @@
+# Reproducible direct dependencies. Installer records the complete resolved environment.
+PySide6-Essentials==6.12.0
+cryptography==50.0.2
+keyring==25.6.0
+python-docx==1.2.0
+openpyxl==3.1.5
+python-pptx==1.0.2
+pypdf==6.21.0
+reportlab==4.4.4
+Pillow==13.0.0
+ddgs==9.6.1
+mss==10.1.0
+PyAutoGUI==0.9.54
+pyperclip==1.11.0
+google-api-python-client==2.185.0
+google-auth-oauthlib==1.2.2
+google-auth-httplib2==0.2.0
+requests==2.34.2
+msal==1.39.0
+
+# Runtime compatibility checks also run in the text-only installation.
+numpy==2.2.6

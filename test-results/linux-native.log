@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/4fff474fe5d4/Jarvis_Fresh_1.0.1_Linux_Mint/scripts/linux_native_smoke.py", line 143, in <module>
+    raise SystemExit(inner() if '--inner' in sys.argv else outer())
+                                                           ^^^^^^^
+  File "/workspace/scratch/4fff474fe5d4/Jarvis_Fresh_1.0.1_Linux_Mint/scripts/linux_native_smoke.py", line 26, in outer
+    if not select.select([server.stdout],[],[],15)[0]: raise RuntimeError('Xvfb startup timeout')
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Xvfb startup timeout

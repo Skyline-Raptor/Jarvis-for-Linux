@@ -1,0 +1,304 @@
+JARVIS FRESH BUILD — SOURCE REVIEW AND IMPLEMENTATION SPECIFICATION
+Design revision 0.1 | Prepared for the October 16, 2026 requirements session
+Status: source review complete; design baseline, not an installed or completed application.
+
+1. DECISION
+
+Create a new application rather than merging the two runtimes. Retain selected
+behavioral contracts and test cases; reimplement permissions, device identity,
+file transactions, observation, scheduling, and user interface around one core.
+Neither uploaded application establishes all requested capabilities or security
+properties. Passing existing tests does not make either a production security
+baseline. No uploaded application launcher was run during this review.
+
+2. EXACT INPUTS AND REVIEW BOUNDARY
+
+User build: JARVIS_Phase_6.3.5_Stable_Call_Playback(1).zip
+Extracted package: JARVIS_Phase_6.3.5_Stable_Call_Playback
+Project metadata: jarvis-assistant 0.63.5, Python >=3.11.
+Archive inventory: 158 entries, 1,357,023 uncompressed bytes.
+
+Father's build:
+OutlookClientWorkbench_v6_6_0_NATIVE_GATE_CANDIDATE_RC12_WITH_OWNER_FIELD_TESTER_v1_9_0.zip
+Candidate: 6.6.0 RC12, Owner Field Tester 1.9.0.
+Archive inventory: 631 entries, 6,502,829 uncompressed bytes.
+
+Review covered architecture/security/release documentation, runtime layout,
+selected server/tool/file/memory/voice/resource implementations, Outlook workers,
+mobile boundary, and existing Python test suites. It was not an exhaustive audit
+of every source line or a penetration test. Historical documentation is evidence
+of intent; current source and native tests must substantiate current behavior.
+
+3. REQUIREMENTS ALREADY AGREED
+
+- Independent Windows 11 installations on laptop and desktop; hardware-adaptive
+  execution on other Windows 11 systems. Installer must distinguish supported
+  architectures; do not claim all Windows machines are equivalent.
+- Approximately 250 GB available on each primary machine. Model packs optional
+  and resumable; scratch space, backups, and outputs count against that budget.
+- Free local AI inference, speech, memory, and document processing. Online web
+  browsing/downloads and explicitly connected accounts are permitted. Required
+  hosted AI subscriptions are excluded. No design may depend on a third-party
+  promise of permanent free, unlimited API access.
+- File attachment/loading, local-device search on request, reading, editing,
+  creating files and code projects, and tools for document/media formats.
+- Conversation, reasoning, coding, research with citations, desktop control,
+  vision, local image generation/editing, audio/video tools, scheduled work,
+  email/calendar, and communications are the target capability scope.
+- Independent machines may pair and exchange files or delegate scoped work over
+  authenticated encrypted internet connections. Both must be running and online.
+- Personal Gmail and UCF Outlook, each with its own authorization. Credential
+  entry occurs locally through the provider. UCF policy may limit access.
+- Startup/tray/background operations; proactive deadline/event notifications;
+  ongoing, adaptive local screen awareness with pause/exclusions and visible state.
+- Push-to-talk and wake word; text first, British George speech follows.
+- Professional, conversational, concise tone. Creativity, emotional intelligence,
+  ethical judgment, leadership, critical thinking, communication, and
+  interdisciplinary thinking are default behavior and evaluation criteria.
+- Ordinary authorized reversible work proceeds independently. Sending, purchases,
+  permanent deletion, installations, and applying core changes require approval.
+- Self-improvement through explicit corrections, evaluated procedures, diagnostics,
+  and tested proposals; core changes use a separate copy and rollback.
+
+4. SOURCE FINDINGS AND DISPOSITION
+
+A. User build: useful behavior, broader desktop scope
+
+src/jarvis_host/server.py uses a threaded Python HTTP server. HostConfig defaults
+to loopback, requires a token of at least 32 characters, and blocks remote model
+URLs unless explicitly enabled. Authorization uses constant-time comparison.
+All reviewed POST routes share the server token; this is not per-device or
+per-capability authorization. HTTP transport alone is not encrypted; remote
+protection requires an external encrypted transport. Retain loopback isolation,
+but replace shared remote authority with paired device identities and grants.
+
+confirmations.py provides random single-use pending confirmation IDs and waits
+with timeouts. tools.py prepares typed actions and previews, makes backups for
+text replacement, revalidates paths, and writes an audit log. Retain the
+prepare/authorize/execute pattern. New approvals must additionally bind requester,
+device, exact action, target, content/version, expiry, and replay protection.
+An approval must not authorize a different file version or changed tool payload.
+
+filesystem.py searches names with a six-second/100,000-entry/50-result bound and
+reads text up to one million bytes. This is useful bounded access, not general
+semantic document understanding or exhaustive filesystem search. Preserve honest
+coverage reporting; build content extraction, chunking, incremental indexing,
+and larger-file streaming separately. Preserve OS permissions and on-demand
+whole-device searches rather than silently indexing all drives.
+
+memory.py stores SQLite/JSON plus editable note mirrors. search() scores literal
+phrases and overlapping words; MAX_MEMORIES is 2,000. This is not the planned
+embedding-based memory system. learning.py stores feedback, checkpoints, projects,
+and outcomes; those records are not autonomous model retraining. Replace memory
+storage/retrieval while supporting deliberate import of selected old records.
+
+screen.py BackgroundScreenAwareness tracks a safe foreground window and captures
+only on request. Sensitive process/title exclusions exist. It does not establish
+continuous visual interpretation, error detection, or proactive intervention.
+Build a new observation pipeline and carry over exclusion concepts.
+
+jarvis_client/speech.py explicitly identifies Kokoro voice bm_george with
+kokoro-v1.0.onnx and voices-v1.0.bin. Preserve the exact voice identity. Model
+weights are external assets; the small source ZIP is not an offline model bundle.
+
+call_audio.py includes WASAPI endpoint handling and format/buffering negotiation.
+VALIDATION_6_3_5.md explicitly says native Windows/VB-CABLE/Linphone listening was
+not tested. Do not claim the reported distortion was fixed from fixtures alone.
+Rebuild ordinary voice first and isolate telephony audio behind its own adapter.
+
+worker_runtime.py starts subprocesses with timeouts. That is fault isolation,
+not an OS security sandbox: it copies the parent environment and does not itself
+restrict filesystem/network authority. The new execution worker must receive a
+minimal environment and explicit resources; hostile-code execution needs an
+actual OS boundary, not just another Python process.
+
+model_resources.py manages vision/call/model residency through leases and unloads.
+Retain explicit resource budgeting; extend it to image/video generation and
+background observation. Disk capacity does not remove RAM/VRAM contention.
+
+The current gui.py is about 193 KB and tools.py about 84 KB. Size alone does not
+prove bugs, but the concentration of unrelated responsibilities increases the
+cost of isolation and testing. Replace both with smaller modules and contracts.
+
+B. Father's build: evidence discipline and explicit action boundaries
+
+START_HERE.txt and the RC12 validation files describe a hybrid Windows PowerShell
+and Python runtime, native PowerShell gating, and owner-corpus acceptance. Its
+primary use case is grounded research over mail, documents, history, and work.
+Do not transplant its client-specific workflow as the universal Jarvis interface.
+
+Docs/Architecture/JARVIS_AUTHORITATIVE_EXECUTION_CONTRACT_v4.1.0.md defines a
+finalized task class that downstream producers cannot silently change. Retain
+this contract: a requested edited file must produce a file or an explicit failure,
+not quietly become a summary or a list of search hits.
+
+Active, Reference, and Excluded source roles are a central boundary. Historical
+material may inform context without creating current overdue tasks. Retain
+source roles, provenance, coverage, exact dates, and owner corrections. Evidence
+certainty and permission authority must remain separate concepts.
+
+App/OutlookDraftWorker.ps1 rejects non-display-only/AllowSend payloads and creates
+an owner-visible unsent item. It contains no sending call. This is a useful
+implemented boundary, not general autonomous email capability. Gmail and UCF
+Outlook connectors and approved sending still require new implementation.
+
+ResearchAttachmentWorker.ps1 uses an extension allowlist, payload/text limits,
+local extraction, Defender detection checks, and explicit blocked states. It
+extracts OOXML text rather than executing macros. Retain these controls, and add
+decompression limits and parser isolation. A Defender check is not a proof that
+all documents are safe.
+
+MobileCompanionServer.ps1 binds a read-only loopback service and validates a
+per-session token hash; it is not an internet device mesh or remote write layer.
+Retain minimized responses and revocability concepts; build pairing and encrypted
+remote transport separately.
+
+Docs/Security/SECURITY.md explicitly distinguishes prototype stores and planned
+owner-bound encryption/recovery/signing from implemented boundaries. Do not
+advertise a finished encrypted vault, signed update system, or owner identity
+system merely because those requirements appear in documentation.
+
+The hybrid runtime has substantial complexity: jarvis_brain.py about 700 KB,
+ClientWorkbench.ps1 about 661 KB, and several large bridge/core scripts. Keep
+proven contracts and selected algorithms; avoid inheriting the full bridge graph.
+
+5. NEW ARCHITECTURE
+
+One local core per device:
+
+Desktop shell/tray -> authenticated local coordinator -> typed task planner
+-> policy/action broker -> isolated tools -> verified artifacts and job receipts.
+
+A local model can propose actions. Only the action broker can grant execution.
+Retrieved pages, mail, screen text, model output, and memory cannot modify grants.
+The model need not see mail tokens, device private keys, or approval secrets.
+
+Core modules and responsibilities:
+
+- Interface: chat, Files, Activity, Devices, Settings. Chat includes attach/drop,
+  voice, stop, and concise progress. Futuristic dark surfaces and restrained cyan
+  accents; no wall of technical controls. Settings contains diagnostics.
+- Task engine: typed intent, requested outputs, scope, dependencies, budgets,
+  cancellation, checkpoints, and explicit completion/partial/failure states.
+- Permission broker: task-scoped grants for ordinary work, explicit approval for
+  consequential actions, policy versioning, revalidation at execution time.
+- Artifact service: parsers/producers per format, originals retained, edit diff,
+  optimistic version checks, atomic writes where feasible, readback validation,
+  rollback, and a clear unsupported/encrypted/corrupt-format result.
+- Knowledge/memory: durable source records, lexical plus local semantic retrieval,
+  project/task/preference/procedure memory, confidence, freshness, contradiction
+  handling, owner corrections, citations, and editable/deletable retention.
+- Observation: foreground accessibility text when available, change detection,
+  sampled screenshots and local OCR/vision when needed. Exclude sensitive windows,
+  pause on lock, keep raw frames temporary, limit suggestions and GPU occupancy.
+  Password/content detection is best-effort, not perfect privacy classification.
+- Voice: separate capture, speech detection, transcription, TTS, and playback
+  workers. Deadlines and restart paths for each stage; interruption and device
+  hot-plug handling. Wake word is activation, never identity authentication.
+- Browser/research: public web retrieval and interactive browsing as separate
+  tools, citations, download receipts and hashes, content treated as untrusted,
+  disclosure controls for private queries, and distinct local-network access.
+- Coding: project workspaces, terminal/task tools, dependencies and test runners,
+  logged execution, recoverable edits. Code creation does not automatically mean
+  permission to execute arbitrary code with all user credentials.
+- Media: independently installable image/audio/video model and tool packs; heavy
+  tasks queued against real device memory. Do not label a capability ready until
+  its backend and an end-to-end check are available.
+- Accounts: provider-specific authorization and credential storage, incremental
+  sync, stale-state markers, read/draft/send/calendar permissions separated.
+- Scheduler: durable jobs and notifications, quiet hours, reconnect catch-up,
+  due-date provenance, timezone correctness, and duplicate alert suppression.
+- Device mesh: paired device keys, mutually authenticated encrypted transport,
+  per-device permissions, revocation, resumable hash-checked file transfers,
+  job identity/idempotency, destination-side approval for consequential actions.
+  Use established cryptography; no custom encryption scheme. NAT traversal and
+  relay availability require validation; no unconditional anywhere guarantee.
+- Improvement: success/failure/correction records, candidate procedure evaluation,
+  configuration experiments, staged code patches, approval before core activation,
+  and rollback. No silent weight retraining or self-granted privileges.
+
+Credentials should use Windows-protected secret storage. Broader encrypted data
+requires an explicit key, recovery, backup, and lock/unlock design. Do not sync
+live SQLite files or raw OAuth tokens between machines. Sync selected records
+with stable IDs, conflict versions, and deletion markers; reauthorize accounts
+on each device unless a separately approved design establishes otherwise.
+
+6. BUILT-IN JUDGMENT AND PERSONALITY
+
+Creativity: multiple distinct approaches when useful, evaluate feasibility.
+Emotional intelligence: tact and conversational cues without pretending to know
+private feelings. Ethics: consider consent, privacy, honesty, and consequences.
+Leadership: organize authorized work and surface obstacles. Critical thinking:
+check assumptions and evidence, distinguish uncertainty and inference.
+Communication: answer first, plain language, appropriate detail. Interdisciplinary
+thinking: combine relevant disciplines, explain connections, avoid forced analogies.
+
+Implement these through model instructions, task/context selection, tool use,
+review criteria, and behavior evaluations. They cannot be guaranteed solely by a
+prompt, and local model capability remains a limiting factor. Preserve fast
+paths for simple requests; reserve deeper verification for difficult tasks.
+
+7. IMPLEMENTATION ORDER AND RELEASE GATES
+
+A. Foundation: packaging, hardware inventory, local UI/core, model adapter,
+   streaming chat, stop/cancel, durable jobs, policy broker, versioned artifacts.
+B. File-first working assistant: imports, search, format readers/writers, coding,
+   source-grounded answers, memory, recoverable edits and readback.
+C. Voice and observation: British George, transcription, wake word/PTT,
+   interruptions, adaptive screen help, hardware/resource scheduling.
+D. Connected work: browsing/downloads, Gmail, UCF Outlook/calendar, reminders,
+   device pairing and transfer/delegation.
+E. Media and improvement: local generation/editing packs, telephony adapter,
+   procedure learning and staged self-improvement.
+
+These are engineering gates within one organized project, not a requirement for
+the user to approve every stage or install a long chain of replacement ZIPs.
+Exact dependency/model versions, licenses, checksums, API policies, and runtime
+support require current primary-source verification during implementation.
+No model selection or current provider pricing was established by this source review.
+
+Acceptance must include:
+- Original file survives edits; validated output, backup, and recovery are present.
+- Edited source file changed externally is detected before replacement.
+- Malicious instructions in mail/web/document/screen content cannot gain authority.
+- A draft request produces a draft; a file request produces the requested artifact.
+- Explicit owner corrections override stale inferred preferences appropriately.
+- Historic documents do not manufacture present-day deadlines.
+- Silence/no microphone, transcription timeout, model crash, and device removal
+  return usable errors without freezing the interface.
+- Screen awareness yields to conversation/heavy work and honors pause/exclusions.
+- Transfers interrupted or duplicated do not corrupt files or repeat actions.
+- Revoked devices lose access; unapproved peers and replayed approvals fail.
+- Google/Microsoft token expiry and reconnect paths work without asking for secrets
+  in conversation; revoked permissions fail closed and show account status.
+- Clean Windows 11 setup, restart, upgrade, uninstall/data preservation, CPU-only
+  degraded operation, and both primary GPU configurations are tested.
+
+8. EXECUTED CHECKS AND LIMITATIONS
+
+User build: PYTHONPATH=src python -m unittest discover -s tests
+Result: 321 passed, 13.237 seconds.
+
+User build standalone tests: invoked all 42 top-level test functions using a
+small runner, providing isolated temporary directories to tmp_path parameters.
+Result: 42 passed, zero failed. Pytest was unavailable; this was not a pytest run.
+
+Father's build: python -m unittest discover -s inspection/father/App/PythonBrain
+Result: 753 passed, 9.177 seconds.
+
+Father's release-specific test_v660.py also passed 21 tests before the complete
+suite; those tests are included in 753, not an additional independent count.
+Some tests assert source markers/contracts rather than executing Windows paths.
+
+Not tested: Windows PowerShell 5.1 native gate, owner field corpus, classic Outlook
+COM, provider authentication, actual desktop control, wake-word accuracy, microphone
+quality, phone listening/VB-CABLE, GPU inference, image/video generation, installer,
+or internet pairing across real networks. No claim of native readiness is made.
+
+9. NEXT IMPLEMENTATION ACTION
+
+Use this specification as the fresh project's baseline. Establish the file-first
+foundation and policy contracts before wiring broad tool authority. Preserve the
+uploaded archives unchanged. No additional broad requirements questions are needed;
+account sign-in and native smoke tests become necessary when their implementations
+are ready. The existing source packages do not contain the local AI model weights.

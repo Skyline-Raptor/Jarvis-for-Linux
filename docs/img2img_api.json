@@ -1,0 +1,10 @@
+{
+  "3": {"class_type":"KSampler","inputs":{"cfg":7,"denoise":0.55,"latent_image":["10",0],"model":["4",0],"negative":["7",0],"positive":["6",0],"sampler_name":"euler","scheduler":"normal","seed":246810,"steps":24}},
+  "4": {"class_type":"CheckpointLoaderSimple","inputs":{"ckpt_name":"v1-5-pruned-emaonly.safetensors"}},
+  "5": {"class_type":"LoadImage","inputs":{"image":"{{input}}"}},
+  "6": {"class_type":"CLIPTextEncode","inputs":{"clip":["4",1],"text":"{{prompt}}"}},
+  "7": {"class_type":"CLIPTextEncode","inputs":{"clip":["4",1],"text":""}},
+  "8": {"class_type":"VAEDecode","inputs":{"samples":["3",0],"vae":["4",2]}},
+  "9": {"class_type":"SaveImage","inputs":{"filename_prefix":"JarvisEdit","images":["8",0]}},
+  "10": {"class_type":"VAEEncode","inputs":{"pixels":["5",0],"vae":["4",2]}}
+}

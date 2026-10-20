@@ -1,0 +1,2 @@
+# Developer-only private X11 / D-Bus harness; not needed to run Jarvis.
+dbus-next==0.2.3

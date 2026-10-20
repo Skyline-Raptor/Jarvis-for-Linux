@@ -1,0 +1,1 @@
+{"result": "passed", "checks": ["window creation", "streamed conversation", "button completion", "memory save", "settings save", "seven-page navigation", "literal text handling", "asynchronous locked-keyring failure", "secure-service retry wiring", "close, hide and reopen"], "screenshots": 7}

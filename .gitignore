@@ -1,0 +1,23 @@
+# Local environments, downloaded dependencies and generated state
+.venv/
+.bootstrap/
+.wheel-builder/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+wheelhouse/*.whl
+wheelhouse/*.tar.gz
+install-logs/
+*.log
+resolved-environment.txt
+.env
+.env.*
+*.sqlite3
+*.sqlite3-*
+*.pem
+*.key
+client_secret*.json
+credentials*.json
+token*.json
+/dist/
+/build/
